@@ -72,7 +72,8 @@
 					</div>
 
 					<span class="text-xl"
-						>{{ convertResult }} {{ fromUsd ? asset.symbol : 'USD' }}</span
+						>{{ convertResult | kSeparator }}
+						{{ fromUsd ? asset.symbol : 'USD' }}</span
 					>
 				</div>
 			</div>
@@ -145,7 +146,7 @@ export default {
 				? this.convertValue / this.asset.priceUsd
 				: this.convertValue * this.asset.priceUsd;
 
-			return result.toFixed(4);
+			return result;
 		},
 
 		min() {

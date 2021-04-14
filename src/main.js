@@ -8,7 +8,7 @@ import { VueSpinners } from '@saeris/vue-spinners';
 
 import router from '@/router';
 import { dollarFilter } from '@/filters';
-import { kDollarFilter, percentFilter } from './filters';
+import { kDollarFilter, kSeparatorFilter, percentFilter } from './filters';
 
 Vue.use(VueSpinners);
 Vue.use(Chartkick.use(Chart));
@@ -16,6 +16,7 @@ Vue.use(Chartkick.use(Chart));
 Vue.filter('dollar', dollarFilter);
 Vue.filter('Kdollar', kDollarFilter);
 Vue.filter('percent', percentFilter);
+Vue.filter('kSeparator', kSeparatorFilter);
 Vue.config.productionTip = false;
 
 new Vue({
